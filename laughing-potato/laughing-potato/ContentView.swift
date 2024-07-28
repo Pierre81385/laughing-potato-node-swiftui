@@ -9,57 +9,21 @@ import SwiftUI
 import SwiftData
 import SocketIO
 
-enum SocketConfig {
-    static let url = "http://127.0.0.1:4200"
-}
-
 struct ContentView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
-    
-    let socketManager = SocketManager(
-           socketURL: URL(string: SocketConfig.url)!,
-           config: [.log(true), .forceWebsockets(true)])
     
     var body: some View {
         ZStack{
             VStack{
+                Text("Welcome")
                 Button(action: {
-                    socketManager.defaultSocket.emit("button pressed", ["yooooo"])
+                    SocketService.shared.socket.emit("press", ["message": "Content view button pressed!"])
                 }, label: {
-                    Text("Emit")
+                    Text("Button")
                 })
             }
-        }
-        .onAppear {
-                    setupSocketConnection()
+        }.onAppear {
+            SocketService.shared.socket.connect()
                 }
-    }
-    
-    private func setupSocketConnection() {
-            // 1
-            let socket = socketManager.defaultSocket
-            // 2
-            socket.on(clientEvent: .connect) {data, ack in
-                print("socket connected")
-            }
-            // 4
-            socket.connect()
-        }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
-            }
-        }
     }
 }
 
@@ -67,7 +31,6 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
 }
 
 //example from Socket.io

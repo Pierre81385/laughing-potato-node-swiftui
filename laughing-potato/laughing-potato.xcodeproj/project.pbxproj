@@ -9,19 +9,21 @@
 /* Begin PBXBuildFile section */
 		B114662B2C56B0B20087FC94 /* laughing_potatoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B114662A2C56B0B20087FC94 /* laughing_potatoApp.swift */; };
 		B114662D2C56B0B20087FC94 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B114662C2C56B0B20087FC94 /* ContentView.swift */; };
-		B114662F2C56B0B20087FC94 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = B114662E2C56B0B20087FC94 /* Item.swift */; };
 		B11466312C56B0B30087FC94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B11466302C56B0B30087FC94 /* Assets.xcassets */; };
 		B11466342C56B0B30087FC94 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B11466332C56B0B30087FC94 /* Preview Assets.xcassets */; };
 		B114663C2C56B12D0087FC94 /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = B114663B2C56B12D0087FC94 /* SocketIO */; };
+		B11466452C57057B0087FC94 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11466442C57057B0087FC94 /* API.swift */; };
+		B11466472C570B840087FC94 /* Socket.IO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11466462C570B840087FC94 /* Socket.IO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B11466272C56B0B20087FC94 /* laughing-potato.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "laughing-potato.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B114662A2C56B0B20087FC94 /* laughing_potatoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = laughing_potatoApp.swift; sourceTree = "<group>"; };
 		B114662C2C56B0B20087FC94 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		B114662E2C56B0B20087FC94 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		B11466302C56B0B30087FC94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B11466332C56B0B30087FC94 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B11466442C57057B0087FC94 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		B11466462C570B840087FC94 /* Socket.IO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Socket.IO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +58,8 @@
 			isa = PBXGroup;
 			children = (
 				B114662A2C56B0B20087FC94 /* laughing_potatoApp.swift */,
+				B114663D2C56D0080087FC94 /* API */,
 				B114662C2C56B0B20087FC94 /* ContentView.swift */,
-				B114662E2C56B0B20087FC94 /* Item.swift */,
 				B11466302C56B0B30087FC94 /* Assets.xcassets */,
 				B11466322C56B0B30087FC94 /* Preview Content */,
 			);
@@ -70,6 +72,15 @@
 				B11466332C56B0B30087FC94 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B114663D2C56D0080087FC94 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				B11466442C57057B0087FC94 /* API.swift */,
+				B11466462C570B840087FC94 /* Socket.IO.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,8 +160,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B114662D2C56B0B20087FC94 /* ContentView.swift in Sources */,
-				B114662F2C56B0B20087FC94 /* Item.swift in Sources */,
+				B11466472C570B840087FC94 /* Socket.IO.swift in Sources */,
 				B114662B2C56B0B20087FC94 /* laughing_potatoApp.swift in Sources */,
+				B11466452C57057B0087FC94 /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
