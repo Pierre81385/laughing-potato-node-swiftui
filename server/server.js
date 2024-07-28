@@ -28,6 +28,10 @@ io.listen(port_socket)
 // Socket.IO setup
 io.on("connection", (socket) => {
     console.log(`A user connected`);
+
+    socket.on("button pressed", (data) => {
+        console.log(data)
+    })
   
     socket.on("disconnect", (data) => {
       console.log("A user disconnected");

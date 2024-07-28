@@ -22,29 +22,14 @@ struct ContentView: View {
            config: [.log(true), .forceWebsockets(true)])
     
     var body: some View {
-        NavigationSplitView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
-                    }
-                }
-                .onDelete(perform: deleteItems)
+        ZStack{
+            VStack{
+                Button(action: {
+                    socketManager.defaultSocket.emit("button pressed", ["yooooo"])
+                }, label: {
+                    Text("Emit")
+                })
             }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
-            }
-        } detail: {
-            Text("Select an item")
         }
         .onAppear {
                     setupSocketConnection()
@@ -84,3 +69,30 @@ struct ContentView: View {
     ContentView()
         .modelContainer(for: Item.self, inMemory: true)
 }
+
+//example from Socket.io
+
+//import SocketIO
+//
+//let manager = SocketManager(socketURL: URL(string: "http://localhost:8080")!, config: [.log(true), .compress])
+//let socket = manager.defaultSocket
+//
+//socket.on(clientEvent: .connect) {data, ack in
+//    print("socket connected")
+//}
+//
+//socket.on("currentAmount") {data, ack in
+//    guard let cur = data[0] as? Double else { return }
+//    
+//    socket.emitWithAck("canUpdate", cur).timingOut(after: 0) {data in
+//        if data.first as? String ?? "passed" == SocketAckValue.noAck {
+//            // Handle ack timeout
+//        }
+//
+//        socket.emit("update", ["amount": cur + 2.50])
+//    }
+//
+//    ack.with("Got your currentAmount", "dude")
+//}
+//
+//socket.connect()
