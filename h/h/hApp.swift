@@ -1,19 +1,18 @@
 //
-//  laughing_potatoApp.swift
-//  laughing-potato
+//  hApp.swift
+//  h
 //
-//  Created by m1_air on 7/28/24.
+//  Created by m1_air on 7/29/24.
 //
 
 import SwiftUI
 import SwiftData
 
 @main
-struct laughing_potatoApp: App {
-    
+struct hApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            UserData.self,
+            Item.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
@@ -26,7 +25,7 @@ struct laughing_potatoApp: App {
 
     var body: some Scene {
         WindowGroup {
-            UserView()
+            ContentView()
         }
         .modelContainer(sharedModelContainer)
     }

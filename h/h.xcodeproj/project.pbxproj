@@ -7,138 +7,105 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B114662B2C56B0B20087FC94 /* laughing_potatoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B114662A2C56B0B20087FC94 /* laughing_potatoApp.swift */; };
-		B114662D2C56B0B20087FC94 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B114662C2C56B0B20087FC94 /* ContentView.swift */; };
-		B11466312C56B0B30087FC94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B11466302C56B0B30087FC94 /* Assets.xcassets */; };
-		B11466342C56B0B30087FC94 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B11466332C56B0B30087FC94 /* Preview Assets.xcassets */; };
-		B114663C2C56B12D0087FC94 /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = B114663B2C56B12D0087FC94 /* SocketIO */; };
-		B11466452C57057B0087FC94 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11466442C57057B0087FC94 /* API.swift */; };
-		B11466472C570B840087FC94 /* Socket.IO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11466462C570B840087FC94 /* Socket.IO.swift */; };
-		B114664A2C58252A0087FC94 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11466492C58252A0087FC94 /* UserModel.swift */; };
-		B114664C2C58272C0087FC94 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B114664B2C58272C0087FC94 /* UserView.swift */; };
-		B114664E2C5827590087FC94 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B114664D2C5827590087FC94 /* UserViewModel.swift */; };
+		B153975D2C582A0C004AA399 /* hApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B153975C2C582A0C004AA399 /* hApp.swift */; };
+		B153975F2C582A0C004AA399 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B153975E2C582A0C004AA399 /* ContentView.swift */; };
+		B15397612C582A0C004AA399 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15397602C582A0C004AA399 /* Item.swift */; };
+		B15397632C582A0D004AA399 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B15397622C582A0D004AA399 /* Assets.xcassets */; };
+		B15397662C582A0D004AA399 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B15397652C582A0D004AA399 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B11466272C56B0B20087FC94 /* laughing-potato.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "laughing-potato.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B114662A2C56B0B20087FC94 /* laughing_potatoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = laughing_potatoApp.swift; sourceTree = "<group>"; };
-		B114662C2C56B0B20087FC94 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		B11466302C56B0B30087FC94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B11466332C56B0B30087FC94 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		B11466442C57057B0087FC94 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
-		B11466462C570B840087FC94 /* Socket.IO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Socket.IO.swift; sourceTree = "<group>"; };
-		B11466492C58252A0087FC94 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
-		B114664B2C58272C0087FC94 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
-		B114664D2C5827590087FC94 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		B15397592C582A0C004AA399 /* h.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = h.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B153975C2C582A0C004AA399 /* hApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hApp.swift; sourceTree = "<group>"; };
+		B153975E2C582A0C004AA399 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B15397602C582A0C004AA399 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		B15397622C582A0D004AA399 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B15397652C582A0D004AA399 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B11466242C56B0B20087FC94 /* Frameworks */ = {
+		B15397562C582A0C004AA399 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B114663C2C56B12D0087FC94 /* SocketIO in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B114661E2C56B0B20087FC94 = {
+		B15397502C582A0C004AA399 = {
 			isa = PBXGroup;
 			children = (
-				B11466292C56B0B20087FC94 /* laughing-potato */,
-				B11466282C56B0B20087FC94 /* Products */,
+				B153975B2C582A0C004AA399 /* h */,
+				B153975A2C582A0C004AA399 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		B11466282C56B0B20087FC94 /* Products */ = {
+		B153975A2C582A0C004AA399 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B11466272C56B0B20087FC94 /* laughing-potato.app */,
+				B15397592C582A0C004AA399 /* h.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B11466292C56B0B20087FC94 /* laughing-potato */ = {
+		B153975B2C582A0C004AA399 /* h */ = {
 			isa = PBXGroup;
 			children = (
-				B114662A2C56B0B20087FC94 /* laughing_potatoApp.swift */,
-				B11466482C5825190087FC94 /* User */,
-				B114663D2C56D0080087FC94 /* API */,
-				B114662C2C56B0B20087FC94 /* ContentView.swift */,
-				B11466302C56B0B30087FC94 /* Assets.xcassets */,
-				B11466322C56B0B30087FC94 /* Preview Content */,
+				B153975C2C582A0C004AA399 /* hApp.swift */,
+				B153975E2C582A0C004AA399 /* ContentView.swift */,
+				B15397602C582A0C004AA399 /* Item.swift */,
+				B15397622C582A0D004AA399 /* Assets.xcassets */,
+				B15397642C582A0D004AA399 /* Preview Content */,
 			);
-			path = "laughing-potato";
+			path = h;
 			sourceTree = "<group>";
 		};
-		B11466322C56B0B30087FC94 /* Preview Content */ = {
+		B15397642C582A0D004AA399 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				B11466332C56B0B30087FC94 /* Preview Assets.xcassets */,
+				B15397652C582A0D004AA399 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		B114663D2C56D0080087FC94 /* API */ = {
-			isa = PBXGroup;
-			children = (
-				B11466442C57057B0087FC94 /* API.swift */,
-				B11466462C570B840087FC94 /* Socket.IO.swift */,
-			);
-			path = API;
-			sourceTree = "<group>";
-		};
-		B11466482C5825190087FC94 /* User */ = {
-			isa = PBXGroup;
-			children = (
-				B11466492C58252A0087FC94 /* UserModel.swift */,
-				B114664B2C58272C0087FC94 /* UserView.swift */,
-				B114664D2C5827590087FC94 /* UserViewModel.swift */,
-			);
-			path = User;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B11466262C56B0B20087FC94 /* laughing-potato */ = {
+		B15397582C582A0C004AA399 /* h */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B11466372C56B0B30087FC94 /* Build configuration list for PBXNativeTarget "laughing-potato" */;
+			buildConfigurationList = B15397692C582A0D004AA399 /* Build configuration list for PBXNativeTarget "h" */;
 			buildPhases = (
-				B11466232C56B0B20087FC94 /* Sources */,
-				B11466242C56B0B20087FC94 /* Frameworks */,
-				B11466252C56B0B20087FC94 /* Resources */,
+				B15397552C582A0C004AA399 /* Sources */,
+				B15397562C582A0C004AA399 /* Frameworks */,
+				B15397572C582A0C004AA399 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "laughing-potato";
-			packageProductDependencies = (
-				B114663B2C56B12D0087FC94 /* SocketIO */,
-			);
-			productName = "laughing-potato";
-			productReference = B11466272C56B0B20087FC94 /* laughing-potato.app */;
+			name = h;
+			productName = h;
+			productReference = B15397592C582A0C004AA399 /* h.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		B114661F2C56B0B20087FC94 /* Project object */ = {
+		B15397512C582A0C004AA399 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
-					B11466262C56B0B20087FC94 = {
+					B15397582C582A0C004AA399 = {
 						CreatedOnToolsVersion = 15.4;
 					};
 				};
 			};
-			buildConfigurationList = B11466222C56B0B20087FC94 /* Build configuration list for PBXProject "laughing-potato" */;
+			buildConfigurationList = B15397542C582A0C004AA399 /* Build configuration list for PBXProject "h" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -146,50 +113,43 @@
 				en,
 				Base,
 			);
-			mainGroup = B114661E2C56B0B20087FC94;
-			packageReferences = (
-				B114663A2C56B12D0087FC94 /* XCRemoteSwiftPackageReference "socket" */,
-			);
-			productRefGroup = B11466282C56B0B20087FC94 /* Products */;
+			mainGroup = B15397502C582A0C004AA399;
+			productRefGroup = B153975A2C582A0C004AA399 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B11466262C56B0B20087FC94 /* laughing-potato */,
+				B15397582C582A0C004AA399 /* h */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		B11466252C56B0B20087FC94 /* Resources */ = {
+		B15397572C582A0C004AA399 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B11466342C56B0B30087FC94 /* Preview Assets.xcassets in Resources */,
-				B11466312C56B0B30087FC94 /* Assets.xcassets in Resources */,
+				B15397662C582A0D004AA399 /* Preview Assets.xcassets in Resources */,
+				B15397632C582A0D004AA399 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		B11466232C56B0B20087FC94 /* Sources */ = {
+		B15397552C582A0C004AA399 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B114662D2C56B0B20087FC94 /* ContentView.swift in Sources */,
-				B114664C2C58272C0087FC94 /* UserView.swift in Sources */,
-				B11466472C570B840087FC94 /* Socket.IO.swift in Sources */,
-				B114662B2C56B0B20087FC94 /* laughing_potatoApp.swift in Sources */,
-				B114664A2C58252A0087FC94 /* UserModel.swift in Sources */,
-				B114664E2C5827590087FC94 /* UserViewModel.swift in Sources */,
-				B11466452C57057B0087FC94 /* API.swift in Sources */,
+				B153975F2C582A0C004AA399 /* ContentView.swift in Sources */,
+				B15397612C582A0C004AA399 /* Item.swift in Sources */,
+				B153975D2C582A0C004AA399 /* hApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		B11466352C56B0B30087FC94 /* Debug */ = {
+		B15397672C582A0D004AA399 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -252,7 +212,7 @@
 			};
 			name = Debug;
 		};
-		B11466362C56B0B30087FC94 /* Release */ = {
+		B15397682C582A0D004AA399 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -308,14 +268,14 @@
 			};
 			name = Release;
 		};
-		B11466382C56B0B30087FC94 /* Debug */ = {
+		B153976A2C582A0D004AA399 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"laughing-potato/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"h/Preview Content\"";
 				DEVELOPMENT_TEAM = 6W56PZLJZG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -329,7 +289,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.pjb.den.laughing-potato";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pjb.den.h;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -337,14 +297,14 @@
 			};
 			name = Debug;
 		};
-		B11466392C56B0B30087FC94 /* Release */ = {
+		B153976B2C582A0D004AA399 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"laughing-potato/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"h/Preview Content\"";
 				DEVELOPMENT_TEAM = 6W56PZLJZG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -358,7 +318,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.pjb.den.laughing-potato";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pjb.den.h;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -369,44 +329,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B11466222C56B0B20087FC94 /* Build configuration list for PBXProject "laughing-potato" */ = {
+		B15397542C582A0C004AA399 /* Build configuration list for PBXProject "h" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B11466352C56B0B30087FC94 /* Debug */,
-				B11466362C56B0B30087FC94 /* Release */,
+				B15397672C582A0D004AA399 /* Debug */,
+				B15397682C582A0D004AA399 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B11466372C56B0B30087FC94 /* Build configuration list for PBXNativeTarget "laughing-potato" */ = {
+		B15397692C582A0D004AA399 /* Build configuration list for PBXNativeTarget "h" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B11466382C56B0B30087FC94 /* Debug */,
-				B11466392C56B0B30087FC94 /* Release */,
+				B153976A2C582A0D004AA399 /* Debug */,
+				B153976B2C582A0D004AA399 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		B114663A2C56B12D0087FC94 /* XCRemoteSwiftPackageReference "socket" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/socketio/socket.io-client-swift";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		B114663B2C56B12D0087FC94 /* SocketIO */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B114663A2C56B12D0087FC94 /* XCRemoteSwiftPackageReference "socket" */;
-			productName = SocketIO;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = B114661F2C56B0B20087FC94 /* Project object */;
+	rootObject = B15397512C582A0C004AA399 /* Project object */;
 }
