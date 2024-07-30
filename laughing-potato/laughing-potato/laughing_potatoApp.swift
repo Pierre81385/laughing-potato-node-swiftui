@@ -14,6 +14,7 @@ struct laughing_potatoApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             UserData.self,
+            MessageData.self
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
