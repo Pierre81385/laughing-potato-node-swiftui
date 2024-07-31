@@ -11,16 +11,14 @@ import SwiftData
 @Model class MessageData: Codable {
     var senderId: String
     var senderName: String
-    var timeStamp: Double = Date.now.timeIntervalSince1970
     var text: String
     var media: [String]
     var locationLat: Double
     var locationLong: Double
     
-    init(senderId: String, senderName: String, timeStamp: Double, text: String, media: [String], locationLat: Double, locationLong: Double) {
+    init(senderId: String, senderName: String, text: String, media: [String], locationLat: Double, locationLong: Double) {
         self.senderId = senderId
         self.senderName = senderName
-        self.timeStamp = timeStamp
         self.text = text
         self.media = media
         self.locationLat = locationLat
@@ -30,7 +28,6 @@ import SwiftData
     enum CodingKeys: String, CodingKey {
            case senderId
            case senderName
-           case timeStamp
            case text
            case media
            case locationLat
@@ -41,7 +38,6 @@ import SwiftData
            let container = try decoder.container(keyedBy: CodingKeys.self)
            senderId = try container.decode(String.self, forKey: .senderId)
            senderName = try container.decode(String.self, forKey: .senderName)
-           timeStamp = try container.decode(Double.self, forKey: .timeStamp)
            text = try container.decode(String.self, forKey: .text)
            media = try container.decode([String].self, forKey: .media)
            locationLat = try container.decode(Double.self, forKey: .locationLat)
@@ -52,7 +48,6 @@ import SwiftData
            var container = encoder.container(keyedBy: CodingKeys.self)
            try container.encode(senderId, forKey: .senderId)
            try container.encode(senderName, forKey: .senderName)
-           try container.encode(timeStamp, forKey: .timeStamp)
            try container.encode(text, forKey: .text)
            try container.encode(media, forKey: .media)
            try container.encode(locationLat, forKey: .locationLat)

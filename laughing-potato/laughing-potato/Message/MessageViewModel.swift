@@ -9,9 +9,9 @@ import Foundation
 import Observation
 
 @Observable class MessageViewModel {
-    var message: MessageData = MessageData(senderId: "", senderName: "", timeStamp: 0.0, text: "", media: [], locationLat: 0.0, locationLong: 0.0)
+    var message: MessageData = MessageData(senderId: "", senderName: "", text: "", media: [], locationLat: 0.0, locationLong: 0.0)
     var messages: [MessageData] = []
-    var baseURL: String = "http://127.0.0.1/3000"
+    var baseURL: String = "http://127.0.0.1:3000"
     
     enum NetworkError: Error {
         case badUrl

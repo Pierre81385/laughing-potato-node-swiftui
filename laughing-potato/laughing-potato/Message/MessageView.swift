@@ -23,7 +23,7 @@ struct MessageView: View {
                 TextField("Message", text: $messageManager.message.text)
                 Button(action: {
                     //testing
-                    messageManager.message.senderId = "test01"
+                    messageManager.message.senderId = "test02"
                     messageManager.message.senderName = "testUser"
                     messageManager.message.media = []
                     messageManager.message.locationLat = 0.0
