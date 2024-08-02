@@ -8,11 +8,63 @@
 import SwiftUI
 
 struct MessageFeedView: View {
+    @Binding var messages: [MessageData]
+    @Binding var user: UserData
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List{
+            ForEach(messages.reversed()) { message in
+                            if String(describing: message.senderId) == String(describing: user.id) {
+                                SenderMessage(message: message)
+                            } else {
+                                MessageFeed(message: message)
+                            }
+                        }
+                    }
+                    .rotationEffect(.radians(.pi))
+                    .scaleEffect(x: -1, y: 1, anchor: .center)
+                    .onAppear{
+                        // Your onAppear code
+                    
+        }
     }
 }
 
-#Preview {
-    MessageFeedView()
+//#Preview {
+//    MessageFeedView()
+//}
+
+struct MessageFeed: View {
+    var message: MessageData
+
+    var body: some View {
+            HStack {
+                VStack.init(alignment: .leading) {
+                    Text(message.text)
+                    Text(message.senderName).font(.headline)
+                }.rotationEffect(.radians(.pi))
+                    .scaleEffect(x: -1, y: 1, anchor: .center)
+                Spacer()
+            }.onAppear{
+            
+            }
+        }
+}
+
+struct SenderMessage: View {
+    var message: MessageData
+
+    var body: some View {
+        HStack {
+            Spacer()
+            VStack.init(alignment: .trailing) {
+                Text(message.text)
+                Text(message.senderName).font(.headline)
+            }
+            .rotationEffect(.radians(.pi))
+            .scaleEffect(x: -1, y: 1, anchor: .center)
+        }.onAppear{
+        
+        }
+    }
 }

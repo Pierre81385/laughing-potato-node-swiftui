@@ -15,7 +15,7 @@ import SwiftData
 //if a user is in local storage, provide the option to continue as that user, or not.
 
 struct UserView: View {
-    @State var user = UserData(id: "", name: "", timeStamp: 0.0)
+    @State var user = UserData(id: UUID().uuidString, name: "", timeStamp: Date.now.timeIntervalSince1970)
     @State var proceed: Bool = false
     @State var errorMessage: String = ""
     @Query var allUsers: [UserData]
@@ -23,7 +23,7 @@ struct UserView: View {
     
     var body: some View {
         NavigationStack{
-            if(allUsers.isEmpty){
+            
                 VStack{
                     Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/).fontWeight(.bold)
                     Text("I'm, ").fontWeight(.bold)
@@ -32,49 +32,35 @@ struct UserView: View {
                         Spacer()
                         Button(action: {
                             user.name = ""
+                            do {
+                                try modelContext.delete(model: UserData.self)
+                            } catch {
+                                print("could not delete User data!")
+                            }
                         }, label: {
                             Image(systemName: "xmark").tint(.black)
                         })
                         Spacer()
                         Button(action: {
                             modelContext.insert(user)
-                            SocketService.shared.socket.emit("joined", ["message": "\(user.name) has entered the chat!"])
+                            SocketService.shared.socket.emit("joined", ["message": "\(user.name) \(user.id) has entered the chat at \(user.timeStamp)!"])
+                            proceed = true
                         }, label: {
                             Image(systemName: "checkmark").tint(.black)
                         }).navigationDestination(isPresented: $proceed, destination: {
-                            
+                            MessageView(sender: $user).navigationBarBackButtonHidden(true)
                         })
                         Spacer()
                     }.padding()
                     Text(errorMessage).tint(.red)
+                }.onAppear{
+                    SocketService.shared.socket.connect()
+                    do {
+                        try modelContext.delete(model: UserData.self)
+                    } catch {
+                        print("could not delete User data!")
+                    }
                 }
-            } else {
-                let u = allUsers[0]
-                VStack{
-                    Text("Continue as \(u.name)?")
-                    HStack{
-                        Spacer()
-                        Button(action: {
-                            do {
-                                try modelContext.delete(model: UserData.self)
-                            } catch {
-                                errorMessage = "Oops something went wrong!  Kill the app and try again."
-                            }
-                        }, label: {
-                            Text("No.")
-                        })
-                        Spacer()
-                        Button(action: {
-                            proceed = true
-                        }, label: {
-                            Text("Yep!")
-                        })
-                        Spacer()
-                    }.padding()
-                    Text(errorMessage).tint(.red)
-
-                }
-            }
         }
     }
 }

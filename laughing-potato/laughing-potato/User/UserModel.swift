@@ -9,7 +9,7 @@ import Foundation
 import SwiftData
 
 @Model class UserData {
-    var id: String = UUID().uuidString
+    var id: String
     var name: String
     var timeStamp: Double = Date.now.timeIntervalSince1970
     

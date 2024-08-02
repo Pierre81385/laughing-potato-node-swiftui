@@ -32,6 +32,7 @@ import SwiftData
            case media
            case locationLat
            case locationLong
+           case createdAt
        }
        
        required init(from decoder: Decoder) throws {
