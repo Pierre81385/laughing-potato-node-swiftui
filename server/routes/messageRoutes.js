@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 
 
 router.route("/send").post((req, res) => {
+
     const senderId = req.body.senderId;
     const senderName = req.body.senderName;
     const text = req.body.text;

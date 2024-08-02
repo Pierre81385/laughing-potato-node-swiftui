@@ -14,13 +14,13 @@ const messageSchema = new Schema(
     senderId: {
       type: String,
       required: true,
-      unique: true,
+      unique: false,
       trim: false,
     },
     senderName: {
         type: String,
         required: true,
-        unique: true,
+        unique: false,
         trim: false,
       },
     text: {

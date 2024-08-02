@@ -51,8 +51,12 @@ io.on("connection", (socket) => {
     console.log(`A user connected`);
 
     socket.on("joined", (data) => {
-        console.log(JSON.stringify(data))
+      console.log(JSON.stringify(data))
+  })
 
+    socket.on("messageSent", (data) => {
+        console.log(JSON.stringify(data))
+        io.emit("newMessage", [{"message": "Update message stream."}])
     })
   
     socket.on("disconnect", (data) => {
