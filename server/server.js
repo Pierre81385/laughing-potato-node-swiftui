@@ -52,6 +52,7 @@ io.on("connection", (socket) => {
 
     socket.on("joined", (data) => {
       console.log(JSON.stringify(data))
+      io.emit("newUser", [data])
   })
 
     socket.on("messageSent", (data) => {

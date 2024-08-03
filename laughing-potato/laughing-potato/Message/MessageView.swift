@@ -15,6 +15,7 @@ struct MessageView: View {
     
     var body: some View {
         VStack{
+            Spacer()
             MessageFeedView(messages: $messageManager.messages, user: $sender)
             HStack{
                 Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
@@ -31,8 +32,9 @@ struct MessageView: View {
                     //testing
                     Task{
                         await messageManager.postMessageData(requestBody: messageManager.message)
-                        await messageManager.getMessageData()
+//                        await messageManager.getMessageData()
                     }
+                    SocketService.shared.socket.emit("messageSent", ["message": "\(messageManager.message.text)"])
                 }, label: {
                     Image(systemName: "paperplane.circle.fill").tint(.black)
                 })
@@ -44,6 +46,13 @@ struct MessageView: View {
                 }
             
         }
+        .onChange(of: SocketService.shared.message, {
+            if(SocketService.shared.message == "updating message list") {
+                Task{
+                    await messageManager.getMessageData()
+                }
+            }
+        })
     }
 }
 

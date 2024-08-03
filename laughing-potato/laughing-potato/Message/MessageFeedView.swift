@@ -13,19 +13,19 @@ struct MessageFeedView: View {
     
     var body: some View {
         List{
-            ForEach(messages.reversed()) { message in
-                            if String(describing: message.senderId) == String(describing: user.id) {
-                                SenderMessage(message: message)
-                            } else {
-                                MessageFeed(message: message)
-                            }
-                        }
-                    }
-                    .rotationEffect(.radians(.pi))
-                    .scaleEffect(x: -1, y: 1, anchor: .center)
-                    .onAppear{
-                        // Your onAppear code
-                    
+            ForEach(messages) { message in
+                if String(describing: message.senderId) == String(describing: user.id) {
+                    SenderMessage(message: message)
+                } else {
+                    MessageFeed(message: message)
+                }
+            }
+            .rotationEffect(.radians(.pi))
+            .scaleEffect(x: -1, y: 1, anchor: .center)
+            .onAppear{
+                // Your onAppear code
+                
+            }
         }
     }
 }

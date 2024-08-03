@@ -61,6 +61,9 @@ struct UserView: View {
                         print("could not delete User data!")
                     }
                 }
+                .onChange(of: SocketService.shared.message, {
+                    errorMessage = SocketService.shared.message
+                })
         }
     }
 }
