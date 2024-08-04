@@ -12,20 +12,29 @@ struct MessageFeedView: View {
     @Binding var user: UserData
     
     var body: some View {
-        List{
-            ForEach(messages) { message in
-                if String(describing: message.senderId) == String(describing: user.id) {
-                    SenderMessage(message: message)
-                } else {
-                    MessageFeed(message: message)
+        
+        if(messages.isEmpty) {
+            VStack{
+                Text("Send a message to get this started!")
+                ProgressView()
+            }
+        } else {
+            List{
+                ForEach(messages) { message in
+                    if String(describing: message.senderId) == String(describing: user.id) {
+                        SenderMessage(message: message)
+                    } else {
+                        MessageFeed(message: message)
+                    }
+                }
+                .rotationEffect(.radians(.pi))
+                .scaleEffect(x: -1, y: 1, anchor: .center)
+                .onAppear{
+                    // Your onAppear code
+                    
                 }
             }
-            .rotationEffect(.radians(.pi))
-            .scaleEffect(x: -1, y: 1, anchor: .center)
-            .onAppear{
-                // Your onAppear code
                 
-            }
         }
     }
 }

@@ -21,6 +21,9 @@
 		B15397702C58400C004AA399 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B153976F2C58400C004AA399 /* MessageView.swift */; };
 		B15397722C58401A004AA399 /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15397712C58401A004AA399 /* MessageViewModel.swift */; };
 		B15397742C59DF8C004AA399 /* MessageFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15397732C59DF8C004AA399 /* MessageFeedView.swift */; };
+		B1F6EE552C5F0ACD0091F361 /* ClickUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F6EE542C5F0ACD0091F361 /* ClickUpViewModel.swift */; };
+		B1F6EE572C5F0B300091F361 /* ClickUpModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F6EE562C5F0B300091F361 /* ClickUpModels.swift */; };
+		B1F6EE592C5F1F3E0091F361 /* ClickUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F6EE582C5F1F3E0091F361 /* ClickUpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		B153976F2C58400C004AA399 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		B15397712C58401A004AA399 /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
 		B15397732C59DF8C004AA399 /* MessageFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageFeedView.swift; sourceTree = "<group>"; };
+		B1F6EE542C5F0ACD0091F361 /* ClickUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickUpViewModel.swift; sourceTree = "<group>"; };
+		B1F6EE562C5F0B300091F361 /* ClickUpModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickUpModels.swift; sourceTree = "<group>"; };
+		B1F6EE582C5F1F3E0091F361 /* ClickUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickUpView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				B114662A2C56B0B20087FC94 /* laughing_potatoApp.swift */,
+				B1F6EE532C5F0AB80091F361 /* ClickUp */,
 				B11466482C5825190087FC94 /* User */,
 				B153976C2C583001004AA399 /* Message */,
 				B114663D2C56D0080087FC94 /* API */,
@@ -118,6 +125,16 @@
 				B15397712C58401A004AA399 /* MessageViewModel.swift */,
 			);
 			path = Message;
+			sourceTree = "<group>";
+		};
+		B1F6EE532C5F0AB80091F361 /* ClickUp */ = {
+			isa = PBXGroup;
+			children = (
+				B1F6EE542C5F0ACD0091F361 /* ClickUpViewModel.swift */,
+				B1F6EE562C5F0B300091F361 /* ClickUpModels.swift */,
+				B1F6EE582C5F1F3E0091F361 /* ClickUpView.swift */,
+			);
+			path = ClickUp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,7 +219,10 @@
 				B11466472C570B840087FC94 /* Socket.IO.swift in Sources */,
 				B15397742C59DF8C004AA399 /* MessageFeedView.swift in Sources */,
 				B15397702C58400C004AA399 /* MessageView.swift in Sources */,
+				B1F6EE592C5F1F3E0091F361 /* ClickUpView.swift in Sources */,
 				B153976E2C583015004AA399 /* MessageModel.swift in Sources */,
+				B1F6EE552C5F0ACD0091F361 /* ClickUpViewModel.swift in Sources */,
+				B1F6EE572C5F0B300091F361 /* ClickUpModels.swift in Sources */,
 				B114662B2C56B0B20087FC94 /* laughing_potatoApp.swift in Sources */,
 				B114664A2C58252A0087FC94 /* UserModel.swift in Sources */,
 				B114664E2C5827590087FC94 /* UserViewModel.swift in Sources */,

@@ -15,8 +15,9 @@ import SwiftData
 //if a user is in local storage, provide the option to continue as that user, or not.
 
 struct UserView: View {
-    @State var user = UserData(id: UUID().uuidString, name: "", timeStamp: Date.now.timeIntervalSince1970)
+    @State var user = UserData(id: UIDevice.current.identifierForVendor?.uuidString ?? UUID().uuidString, name: "", timeStamp: Date.now.timeIntervalSince1970)
     @State var proceed: Bool = false
+    @State var rememberMe: Bool = true
     @State var errorMessage: String = ""
     @Query var allUsers: [UserData]
     @Environment(\.modelContext) var modelContext
@@ -27,7 +28,14 @@ struct UserView: View {
                 VStack{
                     Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/).fontWeight(.bold)
                     Text("I'm, ").fontWeight(.bold)
-                    TextField("What do we call you?", text: $user.name).multilineTextAlignment(.center)
+                    TextField("What do we call you today?", text: $user.name).multilineTextAlignment(.center)
+                    HStack{
+                        Spacer()
+                        Toggle(isOn: $rememberMe, label: {
+                            Text("Remember Me")
+                        }).tint(.black)
+                        Spacer()
+                    }.padding()
                     HStack{
                         Spacer()
                         Button(action: {
@@ -52,7 +60,11 @@ struct UserView: View {
                         })
                         Spacer()
                     }.padding()
-                    Text(errorMessage).tint(.red)
+                    if(errorMessage == "Socket connected") {
+                        Image(systemName: "point.3.filled.connected.trianglepath.dotted").tint(.black)
+                    } else {
+                        Text(errorMessage).tint(.red)
+                    }
                 }.onAppear{
                     SocketService.shared.socket.connect()
                     do {
@@ -63,6 +75,9 @@ struct UserView: View {
                 }
                 .onChange(of: SocketService.shared.message, {
                     errorMessage = SocketService.shared.message
+                })
+                .onChange(of: rememberMe, {
+                    user.id = UUID().uuidString
                 })
         }
     }
