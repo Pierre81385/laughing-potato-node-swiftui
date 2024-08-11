@@ -19,15 +19,12 @@ struct MessageView: View {
                 Spacer()
                 MessageFeedView(messages: $messageManager.messages, user: $sender)
                 HStack{
-                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                        Image(systemName: "photo.on.rectangle.angled").tint(.black)
-                    })
+                    ImagePickerView(media: $messageManager.message.media)
                     TextField("Message", text: $messageManager.message.text)
                     Button(action: {
                         //testing
                         messageManager.message.senderId = sender.id
                         messageManager.message.senderName = sender.name
-                        messageManager.message.media = []
                         messageManager.message.locationLat = 0.0
                         messageManager.message.locationLong = 0.0
                         //testing

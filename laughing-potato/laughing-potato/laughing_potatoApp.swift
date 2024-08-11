@@ -27,8 +27,7 @@ struct laughing_potatoApp: App {
 
     var body: some Scene {
         WindowGroup {
-            //UserView()
-            ClickUpView()
+            UserView()
         }
         .modelContainer(sharedModelContainer)
     }
